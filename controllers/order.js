@@ -33,7 +33,7 @@ exports.getOrderByTransactionId = (req, res, next, id) => {
 
 exports.createOrder = (req, res) => {
     //req,profile gets populated by getUserById
-    console.log(req.profile)
+    // console.log(req.profile)
     req.body.orderData.user = req.profile; 
 
     const orderData = new order(req.body.orderData);
