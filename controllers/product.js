@@ -162,7 +162,8 @@ exports.getAllProducts = (req, res) => {
         .exec((err, products) => {
             if(err){
                 return res.status(400).json({
-                    error: "No Products Found !!"
+                    error: "No Products Found !!",
+                    err: err
                 })
             }
 
