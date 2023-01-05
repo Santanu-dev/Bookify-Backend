@@ -10,7 +10,7 @@ exports.getProductById = (req, res, next, id) => {
         .exec((err, product) => {
         if(err){
             return res.status(400).json({
-                error: "Product Not Found !"
+                error: `Product Not Found ! ${err}`
             })
         }
 
