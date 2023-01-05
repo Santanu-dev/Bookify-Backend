@@ -207,7 +207,7 @@ exports.getSearchedProduct = (req, res) => {
         .exec((err, products) => {
             if(err){
                 return res.status(400).json({
-                    error: "No Products Found !!"
+                    error: err
                 })
             }
 
